@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v6.0"></script>
 <!-- Start Hero -->
 <div class="hero" style="background: url('{{ site.baseurl }}/img/{{ site.hero.hero_img }}') no-repeat; background-size: cover;">
     <div class="hero-content">
@@ -16,21 +17,21 @@ layout: default
     <div class="container-fluid">
         
         <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
-            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Make an Appointment</h3>
+            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Concerte una cita</h3>
             <form action="https://getsimpleform.com/messages?form_api_token={{ site.api_token }}" method="post">
                 <div class="form-field">
-                    <input name="name" type="text" placeholder="Name" required>
+                    <input name="name" type="text" placeholder="Nombre" required>
                 </div>
                 <div class="form-field">
-                    <input name="phone" type="tel" placeholder="Phone" required>
+                    <input name="phone" type="tel" placeholder="Teléfono" required>
                 </div>
                 <div class="form-field">
-                    <input name="email" type="email" placeholder="Email" required>
+                    <input name="email" type="email" placeholder="Correo electrónico" required>
                 </div>
                 <div class="form-field">
-                    <textarea name="comments" placeholder="Message" required></textarea>
+                    <textarea name="comments" placeholder="Mensaje" required></textarea>
                 </div>
-                <input type="submit" class="btn btn-default" value="Send">
+                <input type="submit" class="btn btn-default" value="Enviar">
             </form>
         </div>
 
@@ -42,28 +43,28 @@ layout: default
 <div class="three-shade-col">
     <div class="col-sm-4">
         <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
-        <h3>Contact Us</h3>
+        <h3>Contacte conmigo</h3>
         <ul>
-            {% if site.contact.phone %}<li><strong>Phone:</strong> {{ site.contact.phone }}</li>{% endif %}
-            {% if site.contact.emergency %}<li><strong>Emergency:</strong> {{ site.contact.emergency }}</li>{% endif %}
-            {% if site.contact.email %}<li><strong>Email:</strong> {{ site.contact.email }}</li>{% endif %}
+            {% if site.contact.phone %}<li><strong>Teléfono:</strong> {{ site.contact.phone }}</li>{% endif %}
+            {% if site.contact.emergency %}<li><strong>Emergencias:</strong> {{ site.contact.emergency }}</li>{% endif %}
+            {% if site.contact.email %}<li><strong>Correo electrónico:</strong> {{ site.contact.email }}</li>{% endif %}
         </ul>
     </div>
     <div class="col-sm-4">
         <svg class="icon icon-clock-o"><use xlink:href="#icon-clock-o"></use></svg>
-        <h3>Opening Hours</h3>
+        <h3>Disponibilidad</h3>
         <table>
             <tbody>
                 <tr>
-                    <td>Monday – Friday</td>
+                    <td>Lunes – Viernes</td>
                     <td>{{ site.monday_friday }}</td>
                 </tr>
                 <tr>
-                    <td>Saturday</td>
+                    <td>Sábado</td>
                     <td>{{ site.saturday }}</td>
                 </tr>
                 <tr>
-                    <td>Sunday</td>
+                    <td>Domingo</td>
                     <td>{{ site.sunday }}</td>
                 </tr>
             </tbody>
@@ -71,7 +72,7 @@ layout: default
     </div>
     <div class="col-sm-4">
         <svg class="icon icon-map-marker"><use xlink:href="#icon-map-marker"></use></svg>
-        <h3>Location</h3>
+        <h3>Ubicación</h3>
             <p>
                 {{ site.contact.address }}
             </p>
@@ -82,48 +83,70 @@ layout: default
 <!-- Start About -->
 <div id="about" class="about">
     <div class="container-fluid">
-        <h2 class="section-title">About Us</h2>
-
+        <h2 class="section-title">Acerca de</h2>
         <div class="row">
             <div class="col-sm-6">
-                <h3>Welcome to DentistSmile</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nostrum ab vero temporibus magnam, delectus!</p>
-
+                <h3>Salvador Meza Velázquez</h3>
+                <p>El doctor Meza Velázquez se recibió como médico general en la Universidad Michoacana de San Nicolás De Hidalgo, realizó su especialidad en Ortopedia y Traumatología en el hospital Regional del ISSSTE Licenciado Adolfo López Mateos de la CDMX, así mismo realizó dos cursos de alta especialidad: el primero en Reemplazos articulares en el Centro Médico Nacional "20 de Noviembre" del ISSSTE y el segundo en artroscopia, realizado en el Hospital de Traumatología y Ortopedia de Lomas Verdes del IMSS.</p>
+                <br>
                 <div class="media">
                     <div class="media-left">
                         <div class="boxed-icon">
-                            <svg class="icon icon-heart"><use xlink:href="#icon-heart"></use></svg>
+                            <img src="img/about_list_1.jpg" alt="...">
                         </div>
                     </div>
                     <div class="media-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam explicabo unde doloremque quo, fugit, nisi.</p>
+                        <h4>Especialidad en Ortopedia y Traumatología </h4>
+                        <p>Hospital Regional Lic. Adolfo Lopez Mateos del ISSSTE CDMX</p>
                     </div>
                 </div>
 
                 <div class="media">
                     <div class="media-left">
                         <div class="boxed-icon">
-                            <svg class="icon icon-medkit"><use xlink:href="#icon-medkit"></use></svg>
+                            <img src="img/about_list_2.png" alt="...">
                         </div>
                     </div>
                     <div class="media-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam explicabo unde doloremque quo, fugit, nisi.</p>
+                        <h4>Curso de Alta Especialidad en Artroscopia</h4>
+                        <p>Hospital de Traumatología y Ortopedia Lomas Verdes del IMSS</p>
                     </div>
                 </div>
 
                 <div class="media">
                     <div class="media-left">
                         <div class="boxed-icon">
-                            <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                            <img src="img/about_list_3.jpg" alt="...">
                         </div>
                     </div>
                     <div class="media-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam explicabo unde doloremque quo, fugit, nisi.</p>
+                         <h4>Curso de Alta Especialidad en Reemplazos Articulares</h4>
+                        <p>Centro Médico Nacional "20 de Noviembre" del ISSSTE</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
-                <img src="img/about.jpg" alt="...">
+                <img src="img/about_1.png" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="about2" class="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6" id="about_2_1_img">
+                <img src="img/about_2.jpg" alt="...">
+            </div>
+            <div class="col-sm-6">
+                <h3>Experiencia laboral</h3>
+                <p>Pionero y encargado del módulo de reemplazos y reconstrucción artícular de rodilla y cadera en el IMSS Hospital General Regional 1 , en Cuernavaca Morelos, durante 3 años. En mi practica médica actual, en el Hospital General de Querétaro, es en el módulo de reemplazos articulares complejos y artroscopia de hombro y rodilla. Mi consultorio privado se encuentra en el Hospital Querétaro+</p>
+                <br>
+                <div class="media" style="text-align:center">
+                    <a href="https://hmasqueretaro.mx/"><img src="img/about_list_4.png" alt="..."></a>
+                </div>
+            </div>
+            <div class="col-sm-6" id="about_2_2_img">
+                <img src="img/about_2.jpg" alt="...">
             </div>
         </div>
     </div>
@@ -133,7 +156,7 @@ layout: default
 <!-- Start Treatments -->
 <div id="treatments" class="treatments">
     <div class="container-fluid">
-        <h2 class="section-title">Treatments</h2>
+        <h2 class="section-title">Especialidades</h2>
 
         <div class="row">
             {% for treatment in site.data.treatments %}
@@ -151,7 +174,7 @@ layout: default
 <!-- End Treatments -->
 
 <!-- Start Our team -->
-<div id="team" class="team"> 
+<!--<div id="team" class="team"> 
     <h2 class="section-title">Our Team</h2> 
     <div id="team-carousel">
     {% for member in site.data.team %}
@@ -169,7 +192,7 @@ layout: default
         </div>
     {% endfor %}
     </div>
-</div>
+</div>--
 <!-- End Our team -->
 
 <!-- Start Testimonials -->
@@ -199,7 +222,7 @@ layout: default
 <!-- Start Gallery -->
 <div id="gallery" class="gallery">
         
-    <h2 class="section-title">Gallery</h2>
+    <h2 class="section-title">Artículos</h2>
 
     {% for images in site.data.gallery %}
         <a href="{{ site.baseurl }}/img/gallery/large/{{ images.image_large }}" class="gallery-item expandable-box image-link">

@@ -1,0 +1,23 @@
+/* ABOUT
+-------------------------------------------------*/
+.about {
+    @extend %space;
+    .media {
+        margin-bottom: $space;
+    }
+}
+#about2 {
+	padding-top: 15px;
+
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  #about_2_1_img { 
+  	display: none;
+   } 
+}
+@media screen and (min-width: 768px) {
+  #about_2_2_img { 
+  	display: none;
+   } 
+}
+

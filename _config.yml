@@ -1,30 +1,30 @@
 # Site settings
-title: DentistSmile | Dental Jekyll Theme
-description: "A responsive Jekyll theme for dental clinics."
-baseurl: "" # the subpath of your site, e.g. /blog
+title: Dr-Meza
+description: "Traumatólogo"
+baseurl: "/dr"
 url: "" # the name of your domain
-logo_url: svg/min/logo.svg
+logo_url: img/logo.png
 
 # Hero
 hero: 
-    hero_img: hero.jpg
-    hero_title: DentistSmile
-    hero_description: A responsive Jekyll theme for dental clinics.
+    hero_img: main_1.jpg
+    hero_title: Doctor Salvador Meza Velázquez
+    hero_description: Traumatología y Ortopedia. Cirugía de Reconstrucción Articular
 
 # Contact form
 api_token: # Enter API token here
 
 # Contact info
 contact:
-    phone: 932 50 540
-    emergency: 931 53 234
+    phone: +52 422-312-2431
+    emergency: XX XX XX
     email: contact@yoursite.com
-    address: Von schroeders 273, <br> Viña del mar - Chile
+    address: Calle Privada Ignacio Zaragoza 16A,Consultorio 216, Torre 2, Villas del Refugio, 75030 Santiago de Querétaro, Qro.
 
 # Opening hours
-monday_friday: 9:00 – 18:00
-saturday: 10:00 – 17:00
-sunday: 10:00 – 15:00
+monday_friday: 9:00 – 17:00
+saturday: Cerrado
+sunday: Cerrado
 
 # Testimonials
 testimonials:
@@ -33,11 +33,11 @@ testimonials:
 # Map
 map:
     zoom: 17
-    address: Von schroeders 273, Viña del mar, Chile
+    address: Calle Privada Ignacio Zaragoza 16A,Consultorio 216, Torre 2, Villas del Refugio, 75030 Santiago de Querétaro, Qro.
     address_details: svg/min/logo.svg
 
 # Social settings
-facebook: http://facebook.com
+facebook: https://www.facebook.com/drmezavelazquez/
 twitter: http://twitter.com
 instagram: http://instagram.com
 youtube: http://youtube.com
@@ -45,7 +45,7 @@ skype: skype:obaez_design?userinfo
 feed: yes
 
 # Footer
-copyright: © 2015 DentistSmile - All rights reserved
+copyright: © 2020 Kecho - Todos los derechos reservados
 
 # Build settings
 markdown: kramdown
