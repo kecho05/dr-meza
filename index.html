@@ -14,9 +14,9 @@ layout: default
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-right: 0px;">
         
-        <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
+        <div class="col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-8 form">
             <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Concerte una cita</h3>
             <form action="https://getsimpleform.com/messages?form_api_token={{ site.api_token }}" method="post">
                 <div class="form-field">
@@ -194,3 +194,93 @@ layout: default
     </div>
 </div>--
 <!-- End Our team -->
+
+<!-- Start Testimonials -->
+<div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
+    <div class="overlay-container">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div id="testimonial-carousel">
+                {% for testimonial in site.data.testimonials %}
+                    <div class="testimonial-item">
+                        <svg class="icon icon-quote-left"><use xlink:href="#icon-quote-left"></use></svg>
+                        <blockquote>
+                            <p>{{ testimonial.description }}</p>
+                            <footer>
+                                {{ testimonial.name }}
+                                <small>{{ testimonial.title }}</small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials -->
+
+<!-- Start Gallery -->
+<!--<div id="gallery" class="gallery">
+        
+    <h2 class="section-title">Artículos</h2>
+
+    {% for images in site.data.gallery %}
+        <a href="{{ site.baseurl }}/img/gallery/large/{{ images.image_large }}" class="gallery-item expandable-box image-link">
+            <div class="expandable-box-top">
+                <img src="{{ site.baseurl }}/img/gallery/thumb/{{ images.image_thumb }}" alt="{{ images.image_alt }}">
+            </div>
+            <div class="expandable-box-bottom">
+                <span><svg class="icon icon-chain"><use xlink:href="#icon-chain"></use></svg></span>
+            </div>
+        </a>
+    {% endfor %}
+
+</div>-->
+    <!-- Blog start -->
+
+    <section id="blog" class="module blog">
+        <div class="container">
+
+            <h2 class="section-title">Artículos</h2>
+
+            <div class="row">
+
+                {% for post in site.posts limit:3 %}
+                    <div class="col-sm-4">
+                        <!--<a href="{{site.baseurl}}{{post.url}}" class="blogList wow fadeInUp">-->
+                        <a href="#" class="blogList wow fadeInUp">
+                            <div class="blogList-img">
+                                {% if post.banner_image %}
+                                    <img src="{{ "/assets/images/" | append: post.banner_preview | prepend: site.baseurl }}" alt="Blog Desc">
+                                {% endif %}
+                                {% if post.category %}
+                                <span>{{post.category}}</span>
+                                {% endif %}
+                            </div>
+                            <div class="blogList-desc">
+                                <h3>{{post.title}}</h3>
+                                <div>{{post.description}}</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+
+                <div class="col-sm-12">
+                    <!--<a class="blog-viewMore" href="{{site.baseurl}}/blog.html">VER MÁS</a>-->
+                    <a class="blog-viewMore" href="#">VER MÁS</a>
+                </div>
+
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section>
+
+    <!-- Blog end -->
+<!-- End Gallery -->
+
+<!-- Start Map -->
+<!--<div id="location" class="map" data-zoom="{{ site.map.zoom }}" data-address="{{ site.map.address }}" data-address-details="<img src='{{ site.map.address_details }}'>"></div>-->
+
+<div id="location" class="module" style="width: 100%">
+ <h2 class="section-title">Ubicación</h2>
+    <iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Calle%20Privada%20Ignacio%20Zaragoza%2016A+(Dr.%20Meza)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/draw-radius-circle-map/">Radius map tool</a></iframe></div>
+<!-- End Map -->
